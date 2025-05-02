@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DPR Checker</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            * {
+                font-family: "Oldenburg", serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div
+            class="max-w-screen text-center min-h-screen flex flex-col gap-5 justify-center items-center text-4xl bg-gray-900"
+        >
+            <h1 class="text-cyan-500 w-11/12">
+                Your Screen DPR is
+                <span class="text-teal-200" id="dpr-test-result"></span>
+            </h1>
+            <div
+                class="lg:w-1/2 w-11/12 flex flex-col gap-5 justify-center items-center"
+            >
+                <p class="text-3xl text-blue-500">
+                    Scan the QR bellow to buy me a coffee. Please🙏 don't ignore
+                    this request please🥹
+                </p>
+                <img src="./qr.webp" alt="" class="size-40" draggable="false" />
+                <div class="flex gap-2 items-center">
+                    <img
+                        src="https://img.icons8.com/?size=100&id=7OeRNqg6S7Vf&format=png&color=000000"
+                        alt=""
+                        class="size-8"
+                        draggable="false"
+                    />
+                    <p class="text-white text-xl">01325691878</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("dpr-test-result").innerHTML =
+                window.devicePixelRatio;
+        </script>
+    </body>
+</html>
